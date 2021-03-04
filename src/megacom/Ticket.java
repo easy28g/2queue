@@ -49,15 +49,17 @@ public class Ticket implements Comparable<Ticket>{
     public int compareTo(Ticket o) {
 
         if(this.ticketStatus.equals(o.getTicketStatus())){
-            if(this.getCost()<o.getCost() || this.id<o.getId()){
+            if(this.cost<o.getCost()){
                 return 1;
             } else {
                 return -1;
             }
         }else{
             if(this.ticketStatus.equals(ticketStatus.SIMPLE)){
+
                 return 1;
             }else {
+
                 return -1;
             }
         }
